@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>P-05 · Mapa da situação — Central dos Bichos</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:wght@400;700&family=Nunito:wght@800&display=swap">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="https://unpkg.com/leaflet.heat@0.2.0/dist/leaflet-heat.js"></script>
+<link rel="stylesheet" href="../css/estilo.css">
+<script src="../js/app.js" defer></script>
+</head>
+<body class="painel" data-mapa="painel">
+<div class="painel-layout">
+  <nav data-menu="mapa"></nav>
+  <div>
+    <div data-faixa></div>
+    <header data-topo="Mapa da situação"></header>
+    <main class="area">
+      <div class="filtros" style="align-items:flex-end">
+        <div class="grupo"><span class="forte">Período</span><div class="chips" data-unico><button class="chip" aria-pressed="true">30 dias</button><button class="chip">90 dias</button><button class="chip">12 meses</button></div></div>
+        <div class="grupo"><span class="forte">Camadas</span><div class="chips"><button class="chip" id="camada-areas" aria-pressed="true">Situação por área</button><button class="chip" id="camada-pontos" aria-pressed="true">Incidentes</button><button class="chip" id="camada-calor">Mapa de calor</button></div></div>
+        <div class="grupo"><span class="forte">Cor dos incidentes</span><div class="chips" data-unico><button class="chip" id="cor-prioridade" aria-pressed="true">Por prioridade</button><button class="chip" id="cor-andamento">Por andamento</button></div></div>
+      </div>
+      <div class="duas-col" style="grid-template-columns:minmax(0,1fr) 420px">
+        <div class="coluna" style="gap:12px">
+          <div id="mapa" class="mapa mapa-grande" aria-label="Mapa com a situação de cada área em verde, amarelo ou vermelho e os incidentes registrados"></div>
+          <div class="cartao" style="padding:14px 16px;gap:8px">
+            <div class="legenda-pontos"><span class="forte">Áreas:</span>
+              <span class="item-legenda"><span class="bolinha" style="background:#B3261E"></span>Vermelho · urgência em aberto</span>
+              <span class="item-legenda"><span class="bolinha" style="background:#D9A400"></span>Amarelo · casos continuam surgindo</span>
+              <span class="item-legenda"><span class="bolinha" style="background:#2E6B25"></span>Verde · sob controle</span>
+              <a class="link" href="recomendacoes.html#criterios" style="font-size:14px">Ver critérios</a></div>
+            <div class="legenda-pontos"><span class="forte">Incidentes:</span><span id="legenda-pontos" class="legenda-pontos"></span></div>
+          </div>
+          <div class="aviso azul"><i data-i="cadeado"></i><span>Mapa interno, só para servidores autorizados. O mapa público mostra apenas totais por bairro, sem pontos.</span></div>
+          <p class="legenda">Dados simulados. Clique numa área para ver o que está acontecendo nela. Áreas desenhadas como círculos provisórios: no sistema oficial serão os limites reais dos bairros.</p>
+        </div>
+        <aside id="situacao" class="cartao situacao" style="padding:20px;gap:10px" aria-live="polite"></aside>
+      </div>
+    </main>
+  </div>
+</div>
+</body>
+</html>

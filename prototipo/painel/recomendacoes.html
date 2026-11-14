@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>P-11 · Alertas e recomendações — Central dos Bichos</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:wght@400;700&family=Nunito:wght@800&display=swap">
+<link rel="stylesheet" href="../css/estilo.css">
+<script src="../js/app.js" defer></script>
+</head>
+<body class="painel">
+<div class="painel-layout">
+  <nav data-menu="recomendacoes"></nav>
+  <div>
+    <div data-faixa></div>
+    <header data-topo="Alertas e recomendações"></header>
+    <main class="area">
+      <div class="semaforo">
+        <div class="kpi" style="border-left:6px solid #B3261E"><span class="rot">Áreas em vermelho · agir agora</span><span class="val" id="cont-vermelho">–</span><span class="det" style="color:var(--critico)">Há urgência em aberto</span></div>
+        <div class="kpi" style="border-left:6px solid #D9A400"><span class="rot">Áreas em amarelo · prevenção</span><span class="val" id="cont-amarelo">–</span><span class="det" style="color:var(--media-t)">Casos atendidos, mas continuam surgindo</span></div>
+        <div class="kpi" style="border-left:6px solid #2E6B25"><span class="rot">Áreas em verde · sob controle</span><span class="val" id="cont-verde">–</span><span class="det">Manter a rotina</span></div>
+      </div>
+      <div class="duas-col" style="grid-template-columns:minmax(0,1fr) 380px">
+        <div id="recomendacoes" class="coluna"></div>
+        <aside class="coluna situacao">
+          <section class="cartao" id="criterios" style="padding:20px">
+            <span class="cab-cartao"><i data-i="info"></i>Critérios do semáforo</span>
+            <ul class="criterios" style="padding-left:18px">
+              <li><b style="color:var(--critico)">Vermelho · agir agora:</b> há urgência em aberto: 1 ou mais casos críticos, ou 3 ou mais de prioridade alta, ou 1 ou mais com prazo vencido.</li>
+              <li><b style="color:var(--media-t)">Amarelo · prevenção:</b> nada urgente em aberto, mas nos últimos 30 dias houve 25 ou mais casos novos, ou 20 ou mais animais dóceis abandonados, ou 10 ou mais de maus-tratos, ou 6 ou mais agressivos, ou 6 ou mais com filhotes, ou 5 ou mais de grande porte na via, ou 3 ou mais pontos reincidentes.</li>
+              <li><b style="color:var(--verde-escuro)">Verde · sob controle:</b> nenhum dos critérios acima.</li>
+            </ul>
+            <span class="forte apoio">Como a área volta ao verde</span>
+            <span class="apoio">Atender os casos em aberto tira a área do vermelho na hora. Ela sai do amarelo quando os casos novos dos últimos 30 dias caem abaixo dos limites, em geral depois das ações de prevenção.</span>
+            <span class="legenda">Limites ilustrativos. A Secretaria define e ajusta cada um.</span>
+          </section>
+          <section class="cartao" style="padding:20px">
+            <span class="cab-cartao"><i data-i="ia"></i>Como as recomendações funcionam</span>
+            <ul class="criterios" style="padding-left:18px">
+              <li>Muitos animais dóceis na rua: recolhimento, castração e feira de adoção.</li>
+              <li>Indícios de maus-tratos: fiscalização, comunicação à polícia e conscientização.</li>
+              <li>Risco a pessoas: ação com a Vigilância em Saúde e recolhimento.</li>
+              <li>Muitas ninhadas: castração prioritária de fêmeas.</li>
+              <li>Grande porte na via: Posturas, Trânsito e notificação de proprietários.</li>
+              <li>Pontos reincidentes: placas educativas e ronda da Guarda.</li>
+            </ul>
+            <span class="legenda">O sistema sugere; quem decide e aciona é a equipe.</span>
+          </section>
+        </aside>
+      </div>
+      <p class="legenda">Dados simulados para demonstração. Bairros "A" a "H" provisórios até recebermos a base oficial.</p>
+    </main>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>P-07 · Castração: demanda e fila — Central dos Bichos</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:wght@400;700&family=Nunito:wght@800&display=swap">
+<link rel="stylesheet" href="../css/estilo.css">
+<script src="../js/app.js" defer></script>
+</head>
+<body class="painel">
+<div class="painel-layout">
+  <nav data-menu="castracao"></nav>
+  <div>
+    <div data-faixa></div>
+    <header data-topo="Castração · demanda e fila"></header>
+    <main class="area">
+      <div class="kpis">
+        <div class="kpi"><span class="rot">Animais na fila</span><span class="val">612</span><span class="det">418 cães · 194 gatos</span></div>
+        <div class="kpi"><span class="rot">Castrações no ano</span><span class="val">1.140</span><span class="det">Meta anual: 1.500</span></div>
+        <div class="kpi"><span class="rot">Faltas nas campanhas</span><span class="val">8%</span><span class="det">Lembrete reduziu de 15% para 8%</span></div>
+        <div class="kpi"><span class="rot">Próxima campanha</span><span class="val">05/12</span><span class="det">Bairro A · 40 vagas</span></div>
+      </div>
+      <div class="filtros" style="align-items:center">
+        <span class="forte">Demanda por bairro</span>
+        <span class="cresce"></span>
+        <a class="btn btn-principal btn-auto" href="castracao-campanha.html"><i data-i="mais"></i>Nova campanha</a>
+      </div>
+      <div class="tabela">
+        <table>
+          <thead><tr><th>Bairro</th><th>Na fila</th><th>Cães</th><th>Gatos</th><th>Com prioridade</th><th>Espera média</th><th></th></tr></thead>
+          <tbody>
+            <tr><td class="forte">Bairro A</td><td>142</td><td>98</td><td>44</td><td>51</td><td class="atrasado">5 meses</td><td><a class="link" href="castracao-campanha.html">Criar campanha</a></td></tr>
+            <tr><td class="forte">Bairro B</td><td>109</td><td>71</td><td>38</td><td>40</td><td>4 meses</td><td><a class="link" href="castracao-campanha.html">Criar campanha</a></td></tr>
+            <tr><td class="forte">Bairro C</td><td>88</td><td>60</td><td>28</td><td>22</td><td>3 meses</td><td><a class="link" href="castracao-campanha.html">Criar campanha</a></td></tr>
+            <tr><td class="forte">Bairro D</td><td>81</td><td>55</td><td>26</td><td>30</td><td>3 meses</td><td><a class="link" href="castracao-campanha.html">Criar campanha</a></td></tr>
+            <tr><td class="forte">Bairro E</td><td>74</td><td>49</td><td>25</td><td>18</td><td>2 meses</td><td><a class="link" href="castracao-campanha.html">Criar campanha</a></td></tr>
+            <tr><td class="forte">Bairros F, G e H</td><td>118</td><td>85</td><td>33</td><td>27</td><td>2 meses</td><td><a class="link" href="castracao-campanha.html">Criar campanha</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="aviso azul"><i data-i="info"></i><span>A ordem da fila segue a data de inscrição e os critérios de prioridade definidos pela Secretaria. A posição de cada pessoa é pública, sem dados pessoais, para dar transparência.</span></div>
+      <p class="legenda">Dados simulados para demonstração.</p>
+    </main>
+  </div>
+</div>
+</body>
+</html>

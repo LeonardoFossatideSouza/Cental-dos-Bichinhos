@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>C-14 · Adoção: quero adotar — Central dos Bichos</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:wght@400;700&family=Nunito:wght@800&display=swap">
+<link rel="stylesheet" href="../css/estilo.css">
+<script src="../js/app.js" defer></script>
+</head>
+<body class="celular">
+<div class="tela">
+  <div data-faixa></div>
+  <div data-etapa data-titulo="Quero adotar a Paçoca" data-rotulo="2 minutos" data-voltar="adocao-animal.html"></div>
+  <main class="conteudo">
+    <h1>Conte um pouco sobre você</h1>
+    <p class="sub">É só o primeiro contato. Se a equipe seguir com a sua adoção, ela envia o questionário completo depois.</p>
+    <div class="campo"><label for="n">Nome</label><input id="n" autocomplete="name"></div>
+    <div class="campo"><label for="t">Telefone</label><input id="t" type="tel" autocomplete="tel" placeholder="(35) 9 0000-0000"></div>
+    <div class="campo"><label for="b">Bairro</label><select id="b"><option>Selecione o bairro</option><option>Bairro A</option><option>Bairro B</option><option>Bairro C</option></select></div>
+    <h3>Onde você mora?</h3>
+    <div class="chips" data-unico><button class="chip">Casa com quintal</button><button class="chip">Casa sem quintal</button><button class="chip">Apartamento</button></div>
+    <h3>Tem outros animais?</h3>
+    <div class="chips" data-unico><button class="chip">Não</button><button class="chip">Sim, cães</button><button class="chip">Sim, gatos</button></div>
+    <h3>Consegue arcar com ração, vacinas e veterinário?</h3>
+    <div class="chips" data-unico><button class="chip">Sim</button><button class="chip">Em parte</button><button class="chip">Não</button></div>
+    <div class="campo"><label for="m">Por que você quer adotar? (opcional)</label><input id="m"></div>
+    <div class="aviso"><i data-i="info"></i><span>Ninguém é aprovado ou recusado automaticamente. Quem decide é a equipe responsável pelo animal, depois de conversar com você.</span></div>
+    <a class="btn btn-principal" href="enviado.html?de=adocao"><i data-i="enviar"></i>Enviar interesse</a>
+  </main>
+</div>
+</body>
+</html>

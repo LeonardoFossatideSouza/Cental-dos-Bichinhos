@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>P-03 · Ocorrência e triagem — Central dos Bichos</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:wght@400;700&family=Nunito:wght@800&display=swap">
+<link rel="stylesheet" href="../css/estilo.css">
+<script src="../js/app.js" defer></script>
+</head>
+<body class="painel">
+<div class="painel-layout">
+  <nav data-menu="fila"></nav>
+  <div>
+    <div data-faixa></div>
+    <header data-topo="Ocorrência"></header>
+    <main class="area">
+      <div class="linha" style="gap:12px">
+        <a class="link" href="fila.html" style="display:inline-flex;gap:6px;align-items:center"><i data-i="voltar" class="ico-p"></i>Voltar à fila</a>
+        <h1>SMA-2026-000130</h1><span class="tag tag-alta">Alta</span><span class="pill p-amarelo">Aguardando triagem</span><span class="atrasado">3 h 10 min · prazo de triagem vencido</span>
+      </div>
+      <div class="duas-col">
+        <div class="coluna">
+          <section class="cartao">
+            <div class="cab-cartao"><i data-i="mensagem"></i>Relato de quem registrou</div>
+            <p>“Tem um gato muito magro e com o olho machucado embaixo de um carro na rua. Ele não consegue andar direito.”</p>
+            <span class="legenda">Enviado pelo portal em 14/11 às 09:58 · Bairro A · identidade protegida</span>
+          </section>
+          <section class="cartao">
+            <div class="cab-cartao"><i data-i="ia"></i>Informações organizadas</div>
+            <div class="dados">
+              <div><div class="r">Situação</div><div class="v">Ferido ou doente</div></div>
+              <div><div class="r">Animal</div><div class="v">Gato</div></div>
+              <div><div class="r">Quantidade</div><div class="v">1</div></div>
+              <div><div class="r">Condições</div><div class="v">Ferido, magro</div></div>
+              <div><div class="r">Referência</div><div class="v">Em frente ao nº 120</div></div>
+              <div><div class="r">Fotos</div><div class="v">2 enviadas</div></div>
+            </div>
+          </section>
+          <div class="grade-3" style="grid-template-columns:150px 150px minmax(0,1fr)">
+            <div class="foto"><i data-i="pata"></i></div><div class="foto"><i data-i="pata"></i></div>
+            <div class="cartao" style="justify-content:center"><span class="cab-cartao"><i data-i="pino"></i>Local</span><span class="apoio">Bairro A · em frente ao nº 120</span><a class="link" href="mapa.html" style="text-align:left">Ver no mapa</a></div>
+          </div>
+          <section class="cartao">
+            <div class="cab-cartao"><i data-i="relogio"></i>Histórico</div>
+            <span class="apoio">09:58 · Recebida pelo portal</span>
+            <span class="apoio">09:58 · IA sugeriu prioridade alta (ferimento no olho, magreza, dificuldade para andar)</span>
+            <span class="apoio">09:59 · Aviso de recebimento enviado ao cidadão por e-mail</span>
+          </section>
+        </div>
+        <div class="coluna">
+          <section class="cartao">
+            <div class="cab-cartao"><i data-i="ia"></i>Triagem</div>
+            <div class="linha"><span class="apoio sub">Prioridade sugerida pela IA</span><span class="tag tag-alta">Alta</span></div>
+            <span class="apoio forte">Confirme ou altere a prioridade:</span>
+            <div class="chips" data-unico><button class="chip">Crítica</button><button class="chip" aria-pressed="true">Alta</button><button class="chip">Média</button><button class="chip">Baixa</button></div>
+            <button class="btn btn-principal" type="button"><i data-i="check"></i>Confirmar prioridade</button>
+            <span class="legenda">A decisão fica registrada com o seu nome.</span>
+          </section>
+          <section class="cartao" style="background:var(--amarelo-claro);border:none">
+            <div class="cab-cartao" style="color:var(--marrom)"><i data-i="alerta"></i>Possível duplicada</div>
+            <span class="apoio">SMA-2026-000117 · gato ferido a 120 m, registrado há 2 dias · aguardando atendimento</span>
+            <div class="linha" style="gap:16px"><button class="btn btn-secundario btn-auto" type="button">Vincular</button><button class="link" type="button">Não é a mesma</button></div>
+          </section>
+          <section class="cartao">
+            <div class="cab-cartao"><i data-i="seta"></i>Encaminhar</div>
+            <div class="campo"><label for="eq">Equipe responsável</label><select id="eq"><option>Selecione a equipe</option><option>Equipe 1</option><option>Equipe 2</option><option>Equipe 3</option></select></div>
+            <span class="apoio forte">Andamento</span>
+            <div class="chips" data-unico><button class="chip">Aguardando atendimento</button><button class="chip">Equipe acionada</button><button class="chip">Encaminhada a outro órgão</button></div>
+          </section>
+          <section class="cartao">
+            <div class="cab-cartao"><i data-i="mensagem"></i>Mensagem ao cidadão</div>
+            <div class="campo"><textarea aria-label="Mensagem ao cidadão" style="min-height:90px">Recebemos seu registro e ele já está em análise pela equipe.</textarea><span class="ajuda">Aparece na página de acompanhamento e vai por e-mail, se a pessoa informou.</span></div>
+            <button class="btn btn-secundario" type="button"><i data-i="enviar"></i>Enviar mensagem</button>
+          </section>
+          <section class="cartao">
+            <div class="cab-cartao"><i data-i="cadeado"></i>Contato de quem registrou</div>
+            <span class="apoio sub">Oculto por padrão. A equipe de campo nunca vê esses dados.</span>
+            <button class="btn btn-secundario" type="button"><i data-i="cadeado"></i>Ver contato (com justificativa)</button>
+          </section>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+</body>
+</html>

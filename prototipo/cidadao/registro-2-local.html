@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>C-03 · Onde está o animal — Central dos Bichos</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:wght@400;700&family=Nunito:wght@800&display=swap">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<link rel="stylesheet" href="../css/estilo.css">
+<script src="../js/app.js" defer></script>
+</head>
+<body class="celular" data-mapa="cidadao">
+<div class="tela">
+  <div data-faixa></div>
+  <div data-etapa data-titulo="Novo registro" data-passo="2" data-total="6" data-voltar="registro-1-perigo.html"></div>
+  <main class="conteudo">
+    <h1>Onde está o animal?</h1>
+    <p class="sub">Toque no mapa ou arraste o marcador até o ponto exato. Você também pode usar a sua localização.</p>
+    <div id="mapa" class="mapa" role="application" aria-label="Mapa para marcar o local do animal"></div>
+    <button class="btn btn-secundario" type="button" id="usar-gps"><i data-i="gps"></i>Usar minha localização</button>
+    <p id="gps-aviso" class="legenda" aria-live="polite"></p>
+    <div class="campo">
+      <label for="ref">Ponto de referência</label>
+      <input id="ref" placeholder="Ex.: em frente à padaria">
+      <span class="ajuda">Opcional, ajuda a equipe a encontrar o local.</span>
+    </div>
+    <p class="legenda">O bairro é identificado automaticamente pelo ponto no mapa.</p>
+    <a class="btn btn-principal" href="registro-3-relato.html">Continuar</a>
+  </main>
+</div>
+</body>
+</html>

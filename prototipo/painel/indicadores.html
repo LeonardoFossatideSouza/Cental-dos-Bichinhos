@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>P-06 · Indicadores — Central dos Bichos</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:wght@400;700&family=Nunito:wght@800&display=swap">
+<link rel="stylesheet" href="../css/estilo.css">
+<script src="../js/app.js" defer></script>
+</head>
+<body class="painel">
+<div class="painel-layout">
+  <nav data-menu="indicadores"></nav>
+  <div>
+    <div data-faixa></div>
+    <header data-topo="Indicadores"></header>
+    <main class="area">
+      <div class="filtros" style="align-items:center">
+        <div class="chips" data-unico><button class="chip" aria-pressed="true">Últimos 30 dias</button><button class="chip">90 dias</button><button class="chip">12 meses</button></div>
+        <span class="cresce"></span>
+        <button class="btn btn-secundario btn-auto" type="button">Exportar para Excel</button>
+      </div>
+      <div class="kpis">
+        <div class="kpi"><span class="rot">Registros no período</span><span class="val">248</span><span class="det">+12% em relação ao mês anterior</span></div>
+        <div class="kpi"><span class="rot">Com retorno ao cidadão</span><span class="val">92%</span><span class="det">Meta: 95%</span></div>
+        <div class="kpi"><span class="rot">Tempo médio até a triagem</span><span class="val">1 h 40 min</span><span class="det">Prazo de referência: 2 h (alta)</span></div>
+        <div class="kpi"><span class="rot">Tempo médio até a conclusão</span><span class="val">2,8 dias</span><span class="det">−0,6 dia em relação ao mês anterior</span></div>
+      </div>
+      <div class="duas-col" style="grid-template-columns:repeat(2,minmax(0,1fr))">
+        <section class="cartao" style="padding:20px">
+          <span class="forte">Ocorrências por bairro</span>
+          <div class="barras">
+            <div class="barra"><span>Bairro A</span><div class="trilho"><div class="valor" style="width:100%"></div></div><b>52</b></div>
+            <div class="barra"><span>Bairro B</span><div class="trilho"><div class="valor" style="width:79%"></div></div><b>41</b></div>
+            <div class="barra"><span>Bairro C</span><div class="trilho"><div class="valor" style="width:71%"></div></div><b>37</b></div>
+            <div class="barra"><span>Bairro D</span><div class="trilho"><div class="valor" style="width:63%"></div></div><b>33</b></div>
+            <div class="barra"><span>Bairro E</span><div class="trilho"><div class="valor" style="width:56%"></div></div><b>29</b></div>
+            <div class="barra"><span>Bairro F</span><div class="trilho"><div class="valor" style="width:46%"></div></div><b>24</b></div>
+            <div class="barra"><span>Bairro G</span><div class="trilho"><div class="valor" style="width:35%"></div></div><b>18</b></div>
+            <div class="barra"><span>Bairro H</span><div class="trilho"><div class="valor" style="width:27%"></div></div><b>14</b></div>
+          </div>
+        </section>
+        <section class="cartao" style="padding:20px">
+          <span class="forte">Ocorrências por situação do animal</span>
+          <div class="barras">
+            <div class="barra"><span>Abandonado</span><div class="trilho"><div class="valor" style="width:100%;background:var(--marrom)"></div></div><b>96</b></div>
+            <div class="barra"><span>Ferido ou doente</span><div class="trilho"><div class="valor" style="width:64%;background:var(--marrom)"></div></div><b>61</b></div>
+            <div class="barra"><span>Maus-tratos</span><div class="trilho"><div class="valor" style="width:40%;background:var(--marrom)"></div></div><b>38</b></div>
+            <div class="barra"><span>Agressivo</span><div class="trilho"><div class="valor" style="width:22%;background:var(--marrom)"></div></div><b>21</b></div>
+            <div class="barra"><span>Grande porte na via</span><div class="trilho"><div class="valor" style="width:19%;background:var(--marrom)"></div></div><b>18</b></div>
+            <div class="barra"><span>Silvestre</span><div class="trilho"><div class="valor" style="width:9%;background:var(--marrom)"></div></div><b>9</b></div>
+            <div class="barra"><span>Outro</span><div class="trilho"><div class="valor" style="width:5%;background:var(--marrom)"></div></div><b>5</b></div>
+          </div>
+        </section>
+        <section class="cartao" style="padding:20px">
+          <span class="forte">Ocorrências por semana (últimas 12)</span>
+          <div class="colunas-graf" role="img" aria-label="Gráfico de colunas: de 41 a 66 ocorrências por semana, com tendência de alta; semana atual com 63">
+            <div style="height:62%"></div><div style="height:73%"></div><div style="height:68%"></div><div style="height:79%"></div><div style="height:76%"></div><div style="height:86%"></div>
+            <div style="height:83%"></div><div style="height:92%"></div><div style="height:88%"></div><div style="height:100%"></div><div style="height:92%"></div><div class="atual" style="height:95%"></div>
+          </div>
+          <span class="legenda">Semana atual em destaque</span>
+        </section>
+        <section class="cartao" style="padding:20px">
+          <span class="forte">Por prioridade</span>
+          <div style="display:flex;height:24px;border-radius:8px;overflow:hidden" role="img" aria-label="Crítica 4%, alta 26%, média 41%, baixa 29%">
+            <div style="width:4%;background:var(--critico)"></div><div style="width:26%;background:var(--alta-t)"></div><div style="width:41%;background:var(--media-t)"></div><div style="width:29%;background:var(--azul-escuro)"></div>
+          </div>
+          <div class="linha entre apoio"><span><span class="tag tag-critica">Crítica</span> 11 (4%)</span><span><span class="tag tag-alta">Alta</span> 64 (26%)</span><span><span class="tag tag-media">Média</span> 102 (41%)</span><span><span class="tag tag-baixa">Baixa</span> 71 (29%)</span></div>
+        </section>
+      </div>
+      <p class="legenda">Dados simulados para demonstração. Bairros "A" a "H" provisórios até recebermos a base oficial.</p>
+    </main>
+  </div>
+</div>
+</body>
+</html>

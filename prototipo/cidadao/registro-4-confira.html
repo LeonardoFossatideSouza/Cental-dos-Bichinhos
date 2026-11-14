@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>C-05 · Confira as informações — Central dos Bichos</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:wght@400;700&family=Nunito:wght@800&display=swap">
+<link rel="stylesheet" href="../css/estilo.css">
+<script src="../js/app.js" defer></script>
+</head>
+<body class="celular">
+<div class="tela">
+  <div data-faixa></div>
+  <div data-etapa data-titulo="Novo registro" data-passo="4" data-total="6" data-voltar="registro-3-relato.html"></div>
+  <main class="conteudo" style="gap:14px">
+    <h1>Confira as informações</h1>
+    <div class="aviso verde"><i data-i="ia"></i><span>Preenchido com ajuda da IA a partir do seu relato. Toque para corrigir.</span></div>
+    <p id="relato-citado" class="apoio sub" data-exemplo="Tem um cachorro magro deitado na calçada perto da escola. Parece machucado na pata e está assim desde ontem."></p>
+
+    <h3>Qual a situação do animal?</h3>
+    <div class="chips" id="op-situacao">
+      <button class="chip">Abandonado</button><button class="chip">Ferido ou doente</button><button class="chip">Preso ou em risco</button>
+      <button class="chip">Maus-tratos</button><button class="chip">Agressivo</button><button class="chip">Grande porte na via</button><button class="chip">Silvestre</button>
+    </div>
+    <div id="orientacao-maus-tratos" class="aviso vermelho oculto"><i data-i="alerta"></i>
+      <span>Maus-tratos é crime (art. 32 da Lei 9.605/1998). Além deste registro, procure a Polícia Militar (190), a Polícia Civil ou a Polícia Militar de Meio Ambiente.</span></div>
+
+    <h3>Qual animal?</h3>
+    <div class="chips" id="op-animal" data-unico>
+      <button class="chip">Cão</button><button class="chip">Gato</button><button class="chip">Cavalo ou boi</button><button class="chip">Outro</button>
+    </div>
+    <h3>Quantos?</h3>
+    <div class="chips" id="op-qtd" data-unico>
+      <button class="chip">1</button><button class="chip">2 a 3</button><button class="chip">4 ou mais</button>
+    </div>
+    <h3>Como ele está? (marque todas que valem)</h3>
+    <div class="chips" id="op-condicoes">
+      <button class="chip">Ferido</button><button class="chip">Magro</button><button class="chip">Preso</button><button class="chip">Com filhotes</button><button class="chip">No trânsito</button>
+    </div>
+    <div class="cartao forte-borda">
+      <div class="linha entre"><span class="apoio forte">Prioridade sugerida</span><span id="prioridade-sugerida" class="tag tag-baixa">—</span></div>
+      <span id="motivos" class="legenda"></span>
+    </div>
+    <p class="legenda">A equipe da Secretaria confirma a prioridade.</p>
+    <a class="btn btn-principal" href="registro-5-fotos.html">Continuar</a>
+  </main>
+</div>
+</body>
+</html>

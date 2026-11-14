@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>C-07 · Contato opcional — Central dos Bichos</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:wght@400;700&family=Nunito:wght@800&display=swap">
+<link rel="stylesheet" href="../css/estilo.css">
+<script src="../js/app.js" defer></script>
+</head>
+<body class="celular">
+<div class="tela">
+  <div data-faixa></div>
+  <div data-etapa data-titulo="Novo registro" data-passo="6" data-total="6" data-voltar="registro-5-fotos.html"></div>
+  <main class="conteudo">
+    <h1>Quer receber notícias do seu registro?</h1>
+    <p class="sub">É opcional. Sem e-mail, você acompanha tudo pelo protocolo e pelo código de acesso.</p>
+    <div class="campo">
+      <label for="email">E-mail</label>
+      <input id="email" type="email" placeholder="nome@exemplo.com" autocomplete="email">
+      <span class="ajuda">Só para avisos sobre este registro.</span>
+    </div>
+    <div class="campo">
+      <label for="nome">Como podemos chamar você?</label>
+      <input id="nome" placeholder="Seu nome (opcional)" autocomplete="given-name">
+    </div>
+    <div class="chips"><button class="chip">Prefiro não me identificar</button></div>
+    <div class="aviso"><i data-i="cadeado"></i><span>Seus dados ficam protegidos. A equipe que vai ao local não vê quem fez o registro.</span></div>
+    <a class="link centro" href="#privacidade" onclick="return false">Ver política de privacidade</a>
+    <a class="btn btn-principal" href="registro-recebido.html"><i data-i="enviar"></i>Enviar registro</a>
+  </main>
+</div>
+</body>
+</html>

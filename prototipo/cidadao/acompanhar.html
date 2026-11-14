@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>C-09 · Acompanhar registro — Central dos Bichos</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:wght@400;700&family=Nunito:wght@800&display=swap">
+<link rel="stylesheet" href="../css/estilo.css">
+<script src="../js/app.js" defer></script>
+</head>
+<body class="celular">
+<div class="tela">
+  <div data-faixa></div>
+  <div data-cab="inicio.html"></div>
+  <main class="conteudo">
+    <h1>Acompanhar registro</h1>
+    <div class="grade-2">
+      <div class="campo"><label for="prot">Protocolo</label><input id="prot" value="SMA-2026-000123"></div>
+      <div class="campo"><label for="cod">Código</label><input id="cod" value="K7P-2QX"></div>
+    </div>
+    <section class="cartao forte-borda">
+      <div class="linha entre"><span class="forte">SMA-2026-000123</span><span class="tag tag-alta">Alta</span></div>
+      <span class="apoio sub">Cão ferido · registrado em 14/11 às 09:12</span>
+    </section>
+    <div class="tempo" aria-label="Andamento do registro">
+      <div class="marco feito"><div class="lado"><span class="ponto"><i data-i="check"></i></span><span class="traco"></span></div><div class="info"><span class="apoio forte status">Recebido</span><span class="legenda">14/11, 09:12</span></div></div>
+      <div class="marco feito"><div class="lado"><span class="ponto"><i data-i="check"></i></span><span class="traco"></span></div><div class="info"><span class="apoio forte status">Em análise</span><span class="legenda">14/11, 09:40</span><span class="apoio">Prioridade confirmada: alta</span></div></div>
+      <div class="marco atual"><div class="lado"><span class="ponto"></span><span class="traco"></span></div><div class="info"><span class="status">Em atendimento</span><span class="legenda">14/11, 10:05</span><span class="apoio">Equipe a caminho do local</span></div></div>
+      <div class="marco pendente"><div class="lado"><span class="ponto"></span></div><div class="info"><span class="apoio forte status">Concluído</span><span class="legenda">Aguardando</span></div></div>
+    </div>
+    <div class="aviso azul"><i data-i="mensagem"></i><span><b>Mensagem da equipe</b><br>Recebemos seu registro. Uma equipe foi enviada ao local.<br><span class="legenda">14/11, 10:05</span></span></div>
+    <p class="simulado">Dados simulados para demonstração</p>
+    <a class="btn btn-secundario" href="inicio.html"><i data-i="voltar"></i>Voltar ao início</a>
+  </main>
+</div>
+</body>
+</html>

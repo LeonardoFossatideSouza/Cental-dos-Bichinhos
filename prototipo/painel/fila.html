@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>P-02 · Fila de ocorrências — Central dos Bichos</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:wght@400;700&family=Nunito:wght@800&display=swap">
+<link rel="stylesheet" href="../css/estilo.css">
+<script src="../js/app.js" defer></script>
+</head>
+<body class="painel">
+<div class="painel-layout">
+  <nav data-menu="fila"></nav>
+  <div>
+    <div data-faixa></div>
+    <header data-topo="Fila de ocorrências"></header>
+    <main class="area">
+      <div class="kpis">
+        <div class="kpi"><span class="rot">Em aberto</span><span class="val">31</span><span class="det">6 com prazo vencido</span></div>
+        <div class="kpi"><span class="rot">Aguardando triagem</span><span class="val">9</span><span class="det">2 críticas ou altas</span></div>
+        <div class="kpi"><span class="rot">Em atendimento</span><span class="val">14</span><span class="det">3 equipes em campo</span></div>
+        <div class="kpi"><span class="rot">Concluídas hoje</span><span class="val">7</span><span class="det">Todas com retorno ao cidadão</span></div>
+      </div>
+      <div class="filtros">
+        <div class="campo" style="width:240px"><label for="q">Buscar</label><input id="q" placeholder="Protocolo, bairro ou situação"></div>
+        <div class="grupo"><span class="forte">Prioridade</span><div class="chips" data-unico><button class="chip" aria-pressed="true">Todas</button><button class="chip">Crítica</button><button class="chip">Alta</button><button class="chip">Média</button><button class="chip">Baixa</button></div></div>
+        <div class="grupo"><span class="forte">Situação</span><div class="chips" data-unico><button class="chip" aria-pressed="true">Abertas</button><button class="chip">Atrasadas</button></div></div>
+        <span class="cresce"></span>
+        <a class="btn btn-principal btn-auto" href="registrar-telefone.html"><i data-i="telefone"></i>Registrar atendimento</a>
+      </div>
+      <div class="tabela">
+        <table>
+          <thead><tr><th>Protocolo</th><th>Situação do animal</th><th>Bairro</th><th>Prioridade</th><th>Andamento</th><th>Tempo decorrido</th><th>Responsável</th></tr></thead>
+          <tbody>
+            <tr data-href="ocorrencia.html"><td class="forte">SMA-2026-000131</td><td>Agressivo · cão</td><td>Bairro C</td><td><span class="tag tag-critica">Crítica</span></td><td><span class="pill p-amarelo">Aguardando triagem</span></td><td>12 min</td><td>—</td></tr>
+            <tr data-href="ocorrencia.html"><td class="forte">SMA-2026-000130</td><td>Ferido ou doente · gato</td><td>Bairro A</td><td><span class="tag tag-alta">Alta</span></td><td><span class="pill p-amarelo">Aguardando triagem</span></td><td class="atrasado">3 h 10 min · atrasada</td><td>—</td></tr>
+            <tr data-href="ocorrencia.html"><td class="forte">SMA-2026-000129</td><td>Grande porte na via · cavalo</td><td>Bairro F</td><td><span class="tag tag-alta">Alta</span></td><td><span class="pill p-azul">Equipe acionada</span></td><td>48 min</td><td>Equipe 1</td></tr>
+            <tr data-href="ocorrencia.html"><td class="forte">SMA-2026-000123</td><td>Ferido ou doente · cão</td><td>Bairro A</td><td><span class="tag tag-alta">Alta</span></td><td><span class="pill p-verde">Em atendimento</span></td><td>1 h 05 min</td><td>Equipe 2</td></tr>
+            <tr data-href="ocorrencia.html"><td class="forte">SMA-2026-000127</td><td>Maus-tratos · cão</td><td>Bairro D</td><td><span class="tag tag-media">Média</span></td><td><span class="pill p-amarelo">Em triagem</span></td><td>5 h 20 min</td><td>Atendente</td></tr>
+            <tr data-href="ocorrencia.html"><td class="forte">SMA-2026-000126</td><td>Abandonado · 3 filhotes</td><td>Bairro B</td><td><span class="tag tag-media">Média</span></td><td><span class="pill p-azul">Aguardando atendimento</span></td><td>1 dia</td><td>Equipe 1</td></tr>
+            <tr data-href="ocorrencia.html"><td class="forte">SMA-2026-000124</td><td>Abandonado · cão</td><td>Bairro E</td><td><span class="tag tag-baixa">Baixa</span></td><td><span class="pill p-azul">Aguardando atendimento</span></td><td>2 dias</td><td>—</td></tr>
+            <tr data-href="ocorrencia.html"><td class="forte">SMA-2026-000119</td><td>Silvestre · ave</td><td>Bairro G</td><td><span class="tag tag-baixa">Baixa</span></td><td><span class="pill p-cinza">Encaminhada ao IEF</span></td><td>3 dias</td><td>Atendente</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="legenda">Dados simulados para demonstração. Enquanto a ocorrência aguarda triagem, a prioridade exibida é a sugerida pela IA; a equipe confirma ou altera ao abrir o caso. Clique em uma linha para abrir.</p>
+    </main>
+  </div>
+</div>
+</body>
+</html>

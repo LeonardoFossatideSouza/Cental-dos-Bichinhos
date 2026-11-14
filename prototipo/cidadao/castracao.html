@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>C-10 · Castração: inscrição — Central dos Bichos</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:wght@400;700&family=Nunito:wght@800&display=swap">
+<link rel="stylesheet" href="../css/estilo.css">
+<script src="../js/app.js" defer></script>
+</head>
+<body class="celular">
+<div class="tela">
+  <div data-faixa></div>
+  <div data-etapa data-titulo="Castração gratuita" data-rotulo="Inscrição" data-voltar="inicio.html"></div>
+  <main class="conteudo">
+    <h1>Inscreva seu animal para castração</h1>
+    <p class="sub">A Secretaria organiza campanhas por bairro. Você recebe a data e o local quando chegar a sua vez na fila.</p>
+    <h2>Responsável</h2>
+    <div class="campo"><label for="n">Nome completo</label><input id="n" autocomplete="name" placeholder="Seu nome"></div>
+    <div class="campo"><label for="t">Telefone</label><input id="t" type="tel" autocomplete="tel" placeholder="(35) 9 0000-0000"><span class="ajuda">Para a Secretaria confirmar o agendamento.</span></div>
+    <div class="campo"><label for="e">E-mail (opcional)</label><input id="e" type="email" autocomplete="email" placeholder="nome@exemplo.com"><span class="ajuda">Para receber a convocação e o lembrete.</span></div>
+    <div class="campo"><label for="b">Bairro</label><select id="b"><option>Selecione o bairro</option><option>Bairro A</option><option>Bairro B</option><option>Bairro C</option><option>Bairro D</option></select><span class="ajuda">Lista provisória até recebermos a base oficial de bairros.</span></div>
+    <h2>Animal</h2>
+    <h3>Espécie</h3>
+    <div class="chips" data-unico><button class="chip" aria-pressed="true">Cão</button><button class="chip">Gato</button></div>
+    <h3>Sexo</h3>
+    <div class="chips" data-unico><button class="chip" aria-pressed="true">Fêmea</button><button class="chip">Macho</button></div>
+    <h3>Idade aproximada</h3>
+    <div class="chips" data-unico><button class="chip">Até 1 ano</button><button class="chip" aria-pressed="true">1 a 5 anos</button><button class="chip">Mais de 5 anos</button></div>
+    <div class="campo"><label for="s">Informações de saúde (opcional)</label><input id="s" placeholder="Ex.: toma remédio, está prenha"></div>
+    <button class="link" type="button" style="align-self:flex-start"><i data-i="mais" class="ico-p"></i> Adicionar outro animal</button>
+    <div class="aviso"><i data-i="info"></i><span>Critérios de prioridade na fila serão definidos pela Secretaria (por exemplo, famílias do CadÚnico e protetores).</span></div>
+    <a class="btn btn-principal" href="castracao-confirmada.html"><i data-i="check"></i>Confirmar inscrição</a>
+  </main>
+</div>
+</body>
+</html>

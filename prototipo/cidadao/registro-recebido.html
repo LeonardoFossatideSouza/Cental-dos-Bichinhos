@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>C-08 · Registro recebido — Central dos Bichos</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:wght@400;700&family=Nunito:wght@800&display=swap">
+<link rel="stylesheet" href="../css/estilo.css">
+<script src="../js/app.js" defer></script>
+</head>
+<body class="celular">
+<div class="tela">
+  <div data-faixa></div>
+  <div data-cab="inicio.html"></div>
+  <main class="conteudo">
+    <div style="display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center">
+      <span class="circulo c-verde" style="width:72px;height:72px"><i data-i="check" class="ico-g"></i></span>
+      <h1>Registro recebido</h1>
+      <p class="sub">Guarde estes dados para acompanhar o atendimento.</p>
+    </div>
+    <section class="cartao forte-borda" aria-label="Dados do protocolo">
+      <span class="legenda">Protocolo</span>
+      <h2>SMA-2026-000123</h2>
+      <span class="legenda">Código de acesso</span>
+      <h2 class="t-marrom">K7P-2QX</h2>
+      <button class="btn btn-secundario" type="button" onclick="navigator.clipboard && navigator.clipboard.writeText('Protocolo SMA-2026-000123 · Código K7P-2QX'); this.lastChild.textContent='Copiado'"><i data-i="copiar"></i>Copiar dados</button>
+    </section>
+    <h3>O que acontece agora</h3>
+    <div class="linha" style="flex-wrap:nowrap;gap:12px"><span class="circulo c-verde"><i data-i="relogio" class="ico-p"></i></span><span class="apoio">A equipe analisa seu registro. Prioridade alta: análise em até 2 horas úteis.*</span></div>
+    <div class="linha" style="flex-wrap:nowrap;gap:12px"><span class="circulo c-verde"><i data-i="mensagem" class="ico-p"></i></span><span class="apoio">Se você informou e-mail, recebe um aviso a cada mudança.</span></div>
+    <div class="linha" style="flex-wrap:nowrap;gap:12px"><span class="circulo c-verde"><i data-i="busca" class="ico-p"></i></span><span class="apoio">Acompanhe quando quiser com o protocolo e o código.</span></div>
+    <p class="legenda">*Prazos ilustrativos, a definir pela Secretaria.</p>
+    <div class="aviso"><i data-i="info"></i><span>Registrar não garante o resgate imediato. A equipe analisa cada caso por ordem de prioridade.</span></div>
+    <a class="btn btn-principal" href="acompanhar.html"><i data-i="busca"></i>Acompanhar registro</a>
+    <a class="link centro" href="inicio.html">Voltar ao início</a>
+  </main>
+</div>
+</body>
+</html>

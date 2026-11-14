@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>C-04 · Conte o que acontece — Central dos Bichos</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:wght@400;700&family=Nunito:wght@800&display=swap">
+<link rel="stylesheet" href="../css/estilo.css">
+<script src="../js/app.js" defer></script>
+</head>
+<body class="celular">
+<div class="tela">
+  <div data-faixa></div>
+  <div data-etapa data-titulo="Novo registro" data-passo="3" data-total="6" data-voltar="registro-2-local.html"></div>
+  <main class="conteudo">
+    <h1>Conte o que está acontecendo</h1>
+    <p class="sub">Escreva do seu jeito. Nós organizamos as informações para você conferir.</p>
+    <form id="form-relato" action="registro-4-confira.html" class="conteudo" style="padding:0">
+      <div class="campo">
+        <textarea id="relato" maxlength="500" aria-label="Relato do que está acontecendo">Tem um cachorro magro deitado na calçada perto da escola. Parece machucado na pata e está assim desde ontem.</textarea>
+        <span id="contador" class="ajuda" style="text-align:right">0 / 500</span>
+      </div>
+      <div class="aviso"><i data-i="ia"></i><span>Ao continuar, a inteligência artificial sugere o preenchimento. Você confere e corrige tudo na próxima etapa.</span></div>
+      <button class="btn btn-principal" type="submit"><i data-i="ia"></i>Organizar informações</button>
+    </form>
+    <a class="link centro" href="registro-4-confira.html">Prefiro responder perguntas</a>
+    <p class="legenda centro">Protótipo: a IA aqui é simulada e reage às palavras do texto. Teste escrevendo outro relato.</p>
+  </main>
+</div>
+</body>
+</html>

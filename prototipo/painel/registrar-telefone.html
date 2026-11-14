@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>P-04 · Registro de atendimento — Central dos Bichos</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:wght@400;700&family=Nunito:wght@800&display=swap">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<link rel="stylesheet" href="../css/estilo.css">
+<script src="../js/app.js" defer></script>
+</head>
+<body class="painel" data-mapa="mini">
+<div class="painel-layout">
+  <nav data-menu="telefone"></nav>
+  <div>
+    <div data-faixa></div>
+    <header data-topo="Registro de atendimento"></header>
+    <main class="area">
+      <div class="duas-col">
+        <section class="cartao" style="padding:20px;gap:16px">
+          <span class="forte">Como o cidadão entrou em contato</span>
+          <div class="chips" data-unico><button class="chip" aria-pressed="true">Telefone</button><button class="chip">Presencial</button><button class="chip">Outro (e-mail, ofício)</button></div>
+          <h2>1. Onde está o animal</h2>
+          <div class="campo"><label for="end">Endereço ou ponto de referência</label><input id="end" placeholder="Rua, número ou referência informada no atendimento"></div>
+          <div id="mapa" class="mapa" style="height:220px" aria-label="Mapa para marcar o local"></div>
+          <h2>2. Situação do animal</h2>
+          <div class="chips"><button class="chip">Abandonado</button><button class="chip">Ferido ou doente</button><button class="chip">Preso ou em risco</button><button class="chip" aria-pressed="true">Maus-tratos</button><button class="chip">Agressivo</button><button class="chip">Grande porte na via</button><button class="chip">Silvestre</button></div>
+          <div id="orientacao-maus-tratos" class="aviso vermelho"><i data-i="alerta"></i><span>Oriente quem fez o contato: maus-tratos é crime e também deve ser comunicado à Polícia Militar (190), à Polícia Civil ou à PM de Meio Ambiente.</span></div>
+          <span class="forte">Animal e quantidade</span>
+          <div class="chips"><button class="chip" aria-pressed="true">Cão</button><button class="chip">Gato</button><button class="chip">Cavalo ou boi</button><button class="chip">Outro</button><button class="chip">1</button><button class="chip" aria-pressed="true">2 a 3</button><button class="chip">4 ou mais</button></div>
+          <h2>3. Relato do atendimento</h2>
+          <div class="campo"><textarea aria-label="Relato do atendimento" style="min-height:110px">Moradora relata dois cães presos sem água nem comida no quintal de uma casa vizinha há três dias. Os animais estão magros e latindo muito.</textarea></div>
+        </section>
+        <div class="coluna">
+          <section class="cartao" style="padding:20px">
+            <span class="forte">Quem fez o contato (opcional)</span>
+            <div class="campo"><label for="nm">Nome</label><input id="nm" placeholder="Como a pessoa quer ser chamada"></div>
+            <div class="campo"><label for="tel">Telefone para retorno</label><input id="tel" type="tel" placeholder="(35) 9 0000-0000"><span class="ajuda">Se a equipe precisar de mais informações.</span></div>
+            <div class="campo"><label for="em">E-mail (opcional)</label><input id="em" type="email" placeholder="nome@exemplo.com"><span class="ajuda">Para enviar o protocolo e os avisos.</span></div>
+            <div class="chips"><button class="chip">Não quis se identificar</button></div>
+          </section>
+          <section class="cartao" style="background:var(--verde-claro);border:none;padding:20px">
+            <div class="linha entre"><span class="cab-cartao" style="color:var(--verde-escuro)"><i data-i="ia"></i>Sugestão da IA</span><span class="tag tag-alta">Alta</span></div>
+            <span class="apoio">Possíveis maus-tratos: animais presos sem água e comida há três dias. A prioridade é confirmada por você ao registrar.</span>
+          </section>
+          <div class="aviso"><i data-i="info"></i><span>Ao final do atendimento, informe o protocolo e o código de acesso para a pessoa anotar.</span></div>
+          <a class="btn btn-principal" href="fila.html"><i data-i="check"></i>Registrar e gerar protocolo</a>
+          <a class="btn btn-secundario" href="fila.html">Cancelar</a>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+</body>
+</html>

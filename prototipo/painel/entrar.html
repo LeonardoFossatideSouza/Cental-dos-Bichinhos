@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>P-01 · Entrar no painel — Central dos Bichos</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:wght@400;700&family=Nunito:wght@800&display=swap">
+<link rel="stylesheet" href="../css/estilo.css">
+<script src="../js/app.js" defer></script>
+</head>
+<body class="painel">
+<div data-faixa></div>
+<main style="min-height:calc(100vh - 28px);display:grid;place-items:center;padding:24px">
+  <section class="cartao" style="width:min(440px,100%);padding:32px;gap:16px">
+    <div class="linha" style="gap:12px"><img class="logo-portal" style="width:64px;height:64px;border-radius:16px" src="../img/logo-cb.jpg" alt="Logo da Central dos Bichos"><div><h2 class="t-marrom">Central dos Bichos</h2><span class="legenda">Painel da Secretaria de Meio Ambiente</span></div></div>
+    <div class="campo"><label for="u">E-mail institucional</label><input id="u" type="email" autocomplete="username" placeholder="nome@prefeitura.gov.br"></div>
+    <div class="campo"><label for="s">Senha</label><input id="s" type="password" autocomplete="current-password"></div>
+    <div class="campo"><label for="c">Código de verificação</label><input id="c" inputmode="numeric" autocomplete="one-time-code" placeholder="6 dígitos do aplicativo autenticador"><span class="ajuda">Verificação em duas etapas, obrigatória para servidores e ONGs.</span></div>
+    <a class="btn btn-principal" href="fila.html">Entrar</a>
+    <div class="aviso azul"><i data-i="cadeado"></i><span>Acesso restrito a pessoas autorizadas. Cada acesso a dados pessoais fica registrado.</span></div>
+    <p class="legenda centro">Protótipo: não digite dados reais. Qualquer valor entra.</p>
+  </section>
+</main>
+</body>
+</html>

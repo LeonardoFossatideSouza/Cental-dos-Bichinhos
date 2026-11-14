@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>C-12 · Adoção: vitrine — Central dos Bichos</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:wght@400;700&family=Nunito:wght@800&display=swap">
+<link rel="stylesheet" href="../css/estilo.css">
+<script src="../js/app.js" defer></script>
+<style>
+  .animal { display: flex; flex-direction: column; gap: 6px; text-decoration: none; color: var(--texto); background: #fff; border: 2px solid var(--borda); border-radius: 16px; padding: 10px; box-shadow: 0 4px 0 var(--borda); }
+  .animal:hover { border-color: var(--verde); box-shadow: 0 4px 0 var(--verde); }
+  .animal .foto { aspect-ratio: 4 / 3; }
+</style>
+</head>
+<body class="celular">
+<div class="tela">
+  <div data-faixa></div>
+  <div data-etapa data-titulo="Adotar um animal" data-rotulo="12 disponíveis" data-voltar="inicio.html"></div>
+  <main class="conteudo">
+    <h1>Quem espera um lar</h1>
+    <p class="sub">Animais cuidados pela prefeitura e por ONGs parceiras.</p>
+    <div class="chips" data-unico><button class="chip" aria-pressed="true">Todos</button><button class="chip">Cães</button><button class="chip">Gatos</button></div>
+    <div class="chips"><button class="chip">Porte pequeno</button><button class="chip">Filhotes</button><button class="chip">Castrados</button></div>
+    <div class="grade-2">
+      <a class="animal" href="adocao-animal.html"><div class="foto"><i data-i="pata"></i></div><span class="forte">Paçoca</span><span class="legenda">Cão · fêmea · 2 anos · médio</span><span class="pill p-verde" style="align-self:flex-start">Castrada</span></a>
+      <a class="animal" href="adocao-animal.html"><div class="foto" style="background:var(--azul-claro);color:var(--azul-escuro)"><i data-i="pata"></i></div><span class="forte">Tigrão</span><span class="legenda">Gato · macho · 1 ano</span><span class="pill p-verde" style="align-self:flex-start">Castrado</span></a>
+      <a class="animal" href="adocao-animal.html"><div class="foto" style="background:var(--verde-claro);color:var(--verde-escuro)"><i data-i="pata"></i></div><span class="forte">Mel</span><span class="legenda">Cão · fêmea · 4 meses · pequeno</span><span class="pill p-amarelo" style="align-self:flex-start">Filhote</span></a>
+      <a class="animal" href="adocao-animal.html"><div class="foto"><i data-i="pata"></i></div><span class="forte">Bolinha</span><span class="legenda">Gato · fêmea · 3 anos</span><span class="pill p-verde" style="align-self:flex-start">Castrada</span></a>
+    </div>
+    <p class="simulado">Animais e nomes fictícios para demonstração</p>
+  </main>
+</div>
+</body>
+</html>

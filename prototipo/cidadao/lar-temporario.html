@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>C-15 · Lar temporário — Central dos Bichos</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:wght@400;700&family=Nunito:wght@800&display=swap">
+<link rel="stylesheet" href="../css/estilo.css">
+<script src="../js/app.js" defer></script>
+</head>
+<body class="celular">
+<div class="tela">
+  <div data-faixa></div>
+  <div data-etapa data-titulo="Ser lar temporário" data-rotulo="Cadastro" data-voltar="inicio.html"></div>
+  <main class="conteudo">
+    <h1>Acolha um animal até a adoção</h1>
+    <p class="sub">Você recebe o animal por um tempo combinado. A Secretaria ou a ONG acompanha e orienta.</p>
+    <div class="campo"><label for="n">Nome</label><input id="n" autocomplete="name"></div>
+    <div class="campo"><label for="t">Telefone</label><input id="t" type="tel" autocomplete="tel" placeholder="(35) 9 0000-0000"></div>
+    <div class="campo"><label for="b">Bairro</label><select id="b"><option>Selecione o bairro</option><option>Bairro A</option><option>Bairro B</option><option>Bairro C</option></select><span class="ajuda">Seu endereço completo só é pedido quando houver um acolhimento combinado.</span></div>
+    <h3>Pode receber</h3>
+    <div class="chips"><button class="chip">Cães</button><button class="chip">Gatos</button><button class="chip">Filhotes</button></div>
+    <h3>Porte</h3>
+    <div class="chips"><button class="chip">Pequeno</button><button class="chip">Médio</button><button class="chip">Grande</button></div>
+    <h3>Quantos ao mesmo tempo?</h3>
+    <div class="chips" data-unico><button class="chip">1</button><button class="chip">2</button><button class="chip">3 ou mais</button></div>
+    <h3>Por quanto tempo?</h3>
+    <div class="chips" data-unico><button class="chip">Até 15 dias</button><button class="chip">Até 1 mês</button><button class="chip">Mais de 1 mês</button></div>
+    <h3>Tem outros animais em casa?</h3>
+    <div class="chips" data-unico><button class="chip">Não</button><button class="chip">Sim</button></div>
+    <a class="btn btn-principal" href="enviado.html?de=lar"><i data-i="enviar"></i>Enviar cadastro</a>
+  </main>
+</div>
+</body>
+</html>

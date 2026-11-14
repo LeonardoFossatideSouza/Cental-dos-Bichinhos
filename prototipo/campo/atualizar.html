@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>E-02 · Equipe de campo: atualizar ocorrência — Central dos Bichos</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:wght@400;700&family=Nunito:wght@800&display=swap">
+<link rel="stylesheet" href="../css/estilo.css">
+<script src="../js/app.js" defer></script>
+</head>
+<body class="celular">
+<div class="tela">
+  <div data-faixa></div>
+  <div data-etapa data-titulo="SMA-2026-000123" data-rotulo="Equipe 2" data-voltar="ocorrencias.html"></div>
+  <main class="conteudo" style="gap:14px">
+    <div class="linha"><span class="tag tag-alta">Alta</span><span class="forte">Ferido ou doente · cão</span></div>
+    <p class="apoio sub">Bairro A · em frente ao nº 120</p>
+    <a class="btn btn-secundario" href="https://www.openstreetmap.org/?mlat=-20.917&amp;mlon=-46.984#map=17/-20.917/-46.984" target="_blank" rel="noopener"><i data-i="pino"></i>Abrir rota no mapa</a>
+    <section class="cartao"><span class="legenda">Relato</span><span class="apoio">“Tem um cachorro magro deitado na calçada perto da escola. Parece machucado na pata.”</span></section>
+    <h3>Atualizar andamento</h3>
+    <div class="chips" data-unico><button class="chip">A caminho</button><button class="chip">No local</button><button class="chip" aria-pressed="true">Animal recolhido</button><button class="chip">Não localizado</button><button class="chip">Encaminhado</button></div>
+    <h3>Foto do atendimento</h3>
+    <div class="grade-3">
+      <div class="foto" role="img" aria-label="Foto do atendimento (ilustração)"><i data-i="pata"></i></div>
+      <label class="add-foto"><i data-i="camera"></i>Adicionar<input type="file" accept="image/*" capture="environment" class="oculto"></label>
+    </div>
+    <div class="campo"><label for="obs">Observação</label><input id="obs" value="Recolhido e levado à clínica parceira"><span class="ajuda">Visível só para a Secretaria.</span></div>
+    <div class="aviso"><i data-i="mensagem"></i><span>Ao salvar, a nova situação aparece no acompanhamento do cidadão. Se ele informou e-mail, também recebe um aviso.</span></div>
+    <a class="btn btn-principal" href="ocorrencias.html"><i data-i="check"></i>Salvar atualização</a>
+  </main>
+</div>
+</body>
+</html>

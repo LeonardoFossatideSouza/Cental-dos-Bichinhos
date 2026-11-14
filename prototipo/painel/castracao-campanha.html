@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>P-08 · Castração: nova campanha — Central dos Bichos</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:wght@400;700&family=Nunito:wght@800&display=swap">
+<link rel="stylesheet" href="../css/estilo.css">
+<script src="../js/app.js" defer></script>
+</head>
+<body class="painel">
+<div class="painel-layout">
+  <nav data-menu="castracao"></nav>
+  <div>
+    <div data-faixa></div>
+    <header data-topo="Castração · nova campanha"></header>
+    <main class="area">
+      <a class="link" href="castracao.html" style="display:inline-flex;gap:6px;align-items:center;align-self:flex-start"><i data-i="voltar" class="ico-p"></i>Voltar à demanda</a>
+      <div class="duas-col" style="grid-template-columns:minmax(0,1fr) 440px">
+        <section class="cartao" style="padding:20px;gap:16px">
+          <h2>Dados da campanha</h2>
+          <div class="grade-2">
+            <div class="campo"><label for="b">Bairro</label><select id="b"><option>Bairro A</option><option>Bairro B</option><option>Bairro C</option></select></div>
+            <div class="campo"><label for="v">Vagas</label><input id="v" type="number" value="40"></div>
+            <div class="campo"><label for="d">Data</label><input id="d" type="date" value="2026-12-05"></div>
+            <div class="campo"><label for="h">Horário</label><input id="h" value="7h às 13h"></div>
+          </div>
+          <div class="campo"><label for="l">Local</label><input id="l" value="Escola municipal do bairro (local ilustrativo)"></div>
+          <div class="campo"><label for="eq">Quem realiza</label><select id="eq"><option>Clínica credenciada (ilustrativo)</option><option>Equipe veterinária da prefeitura</option><option>Unidade móvel de castração</option></select></div>
+          <span class="forte">Quem será convocado</span>
+          <div class="chips" data-unico><button class="chip" aria-pressed="true">Os 40 primeiros da fila do bairro</button><button class="chip">Escolher manualmente</button></div>
+          <div class="aviso"><i data-i="info"></i><span>Quem não confirmar em 3 dias libera a vaga para o próximo da fila automaticamente.</span></div>
+        </section>
+        <div class="coluna">
+          <section class="cartao" style="padding:20px">
+            <span class="cab-cartao"><i data-i="mensagem"></i>Prévia da convocação</span>
+            <div style="background:var(--creme);border-radius:12px;padding:14px;font-size:14px;line-height:20px">
+              <b>Central dos Bichos · Castração gratuita</b><br><br>
+              Olá! Chegou a vez do seu animal na fila de castração.<br>
+              <b>Data:</b> 05/12, das 7h às 13h<br>
+              <b>Local:</b> escola municipal do bairro<br><br>
+              <b>Antes da cirurgia:</b> jejum de 8 horas de comida e 4 horas de água.<br>
+              <b>Leve:</b> documento com foto e comprovante de endereço. Cães com coleira e guia; gatos em caixa de transporte.<br><br>
+              Confirme a presença até 30/11 pelo link ou pelo telefone da Secretaria.
+            </div>
+            <span class="legenda">Enviada por e-mail e exibida no portal. Sem WhatsApp nem SMS (D-09). Quem não tem e-mail recebe ligação da Secretaria.</span>
+          </section>
+          <a class="btn btn-principal" href="castracao-dia.html"><i data-i="enviar"></i>Criar campanha e convocar</a>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+</body>
+</html>
