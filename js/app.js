@@ -30,7 +30,8 @@
     casa: '<path d="M4 11 12 4l8 7"/><path d="M6 10v10h12V10"/>',
     grafico: '<path d="M4 20V4"/><path d="M4 20h16"/><rect x="7" y="11" width="3" height="6"/><rect x="12" y="7" width="3" height="10"/><rect x="17" y="13" width="3" height="4"/>',
     usuarios: '<circle cx="9" cy="8" r="3.5"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><path d="M16 4.5a3.5 3.5 0 0 1 0 7M21 20c0-2.8-1.6-5-4-5.7"/>',
-    sair: '<path d="M14 4h5v16h-5"/><path d="M10 8l-4 4 4 4M6 12h10"/>'
+    sair: '<path d="M14 4h5v16h-5"/><path d="M10 8l-4 4 4 4M6 12h10"/>',
+    menu: '<path d="M4 7h16M4 12h16M4 17h16"/>'
   };
   function svg(nome) {
     return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' + (I[nome] || "") + "</svg>";
@@ -71,13 +72,28 @@
       var atual = el.getAttribute("data-menu");
       el.className = "menu";
       el.setAttribute("aria-label", "Menu do painel");
-      el.innerHTML = '<a class="marca" href="fila.html"><span class="simbolo"><i data-i="pata"></i></span><span><span class="nome">Central dos Bichos</span><span class="legenda">Painel da Secretaria</span></span></a>' +
+      // No celular e no tablet, só a barra aparece; o botão "Menu" abre os itens (ver estilo.css).
+      el.innerHTML = '<div class="menu-barra"><a class="marca" href="fila.html"><span class="simbolo"><i data-i="pata"></i></span><span><span class="nome">Central dos Bichos</span><span class="legenda">Painel da Secretaria</span></span></a>' +
+        '<button type="button" class="menu-botao" aria-expanded="false" aria-controls="menu-itens"><span class="quando-fechado"><i data-i="menu"></i></span><span class="quando-aberto"><i data-i="fechar"></i></span>Menu</button></div>' +
+        '<div class="menu-itens" id="menu-itens">' +
         MENU.map(function (m) { return '<a class="item" href="' + m[1] + '"' + (m[0] === atual ? ' aria-current="page"' : "") + '><i data-i="' + m[2] + '"></i>' + m[3] + "</a>"; }).join("") +
-        '<a class="item" href="entrar.html"><i data-i="sair"></i>Sair</a><p class="rodape">Secretaria Municipal de Meio Ambiente</p>';
+        '<a class="item" href="entrar.html"><i data-i="sair"></i>Sair</a></div><p class="rodape">Secretaria Municipal de Meio Ambiente</p>';
+      var botao = el.querySelector(".menu-botao");
+      botao.addEventListener("click", function () {
+        var aberto = el.classList.toggle("aberto");
+        botao.setAttribute("aria-expanded", aberto ? "true" : "false");
+      });
     });
     document.querySelectorAll("[data-topo]").forEach(function (el) {
       el.className = "topo";
-      el.innerHTML = '<h2>' + el.getAttribute("data-topo") + '</h2><div class="usuario"><span class="avatar">AT</span><span><span class="forte apoio" style="display:block">Atendente (perfil fictício)</span><span class="legenda">Secretaria de Meio Ambiente</span></span></div>';
+      el.innerHTML = '<h2>' + el.getAttribute("data-topo") + '</h2><div class="usuario"><span class="avatar" title="Atendente (perfil fictício)">AT</span><span class="usuario-texto"><span class="forte apoio" style="display:block">Atendente (perfil fictício)</span><span class="legenda">Secretaria de Meio Ambiente</span></span></div>';
+    });
+    // Tabelas: guarda o nome da coluna em cada célula, para o celular mostrar a linha como cartão.
+    document.querySelectorAll(".tabela table").forEach(function (t) {
+      var rotulos = Array.prototype.map.call(t.querySelectorAll("thead th"), function (th) { return th.textContent.trim(); });
+      t.querySelectorAll("tbody tr").forEach(function (tr) {
+        Array.prototype.forEach.call(tr.children, function (td, i) { if (rotulos[i]) td.setAttribute("data-rotulo", rotulos[i]); });
+      });
     });
   }
 
@@ -330,7 +346,7 @@
     return '<div class="linha entre"><h2>' + a.nome + '</h2><span class="nivel ' + n.classe + '">' + n.rotulo + "</span></div>" +
       '<p class="apoio">' + motivo(a) + "</p>" + htmlSinais(a) +
       '<span class="forte" style="margin-top:6px">O que está acontecendo (30 dias)</span><div class="barras">' +
-      itens.map(function (i) { return '<div class="barra" style="grid-template-columns:170px minmax(0,1fr) 32px"><span>' + i[0] + '</span><div class="trilho"><div class="valor" style="width:' + Math.round(100 * i[1] / max) + '%;background:var(--marrom)"></div></div><b>' + i[1] + "</b></div>"; }).join("") +
+      itens.map(function (i) { return '<div class="barra barra-sit"><span>' + i[0] + '</span><div class="trilho"><div class="valor" style="width:' + Math.round(100 * i[1] / max) + '%;background:var(--marrom)"></div></div><b>' + i[1] + "</b></div>"; }).join("") +
       '</div><span class="forte" style="margin-top:6px">Recomendações do sistema</span>' + htmlRecs(a) + htmlSimulacao(a) +
       '<span class="legenda">Sugestões geradas por regras definidas pela Secretaria. Quem decide e aciona é sempre a equipe.</span>';
   }

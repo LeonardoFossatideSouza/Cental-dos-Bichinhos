@@ -14,7 +14,7 @@ python -m http.server 8080 --directory prototipo
 
 e abra http://localhost:8080 no navegador.
 
-As telas do cidadão e da equipe de campo foram feitas para celular; no computador, elas aparecem centralizadas como um aparelho. As telas do painel foram feitas para computador.
+As telas do cidadão e da equipe de campo foram feitas para celular; no computador, elas aparecem centralizadas como um aparelho. As telas do painel foram feitas para computador e se adaptam ao tablet e ao celular: o menu vira um botão "Menu" no topo, as colunas ficam uma embaixo da outra e as tabelas viram cartões.
 
 ## Requer internet
 

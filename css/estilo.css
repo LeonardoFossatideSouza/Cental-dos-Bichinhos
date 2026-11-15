@@ -143,6 +143,12 @@ body.painel { background: var(--creme); }
 .menu { background: #fff; border-right: 1px solid var(--borda); padding: 20px 16px; display: flex; flex-direction: column; gap: 4px; position: sticky; top: 0; height: 100vh; }
 .menu .marca { display: flex; gap: 10px; align-items: center; padding-bottom: 20px; text-decoration: none; }
 .menu .marca .nome { font-weight: 700; color: var(--marrom); display: block; }
+.menu-itens { display: flex; flex-direction: column; gap: 4px; }
+.menu-botao { display: none; align-items: center; gap: 8px; min-height: 44px; padding: 0 14px; border-radius: 12px; border: 2px solid var(--borda); background: #fff;
+  font: 700 14px/20px var(--f-texto); color: var(--texto); cursor: pointer; }
+.menu-botao .ico { width: 20px; height: 20px; }
+.menu-botao .quando-aberto, .menu-botao[aria-expanded="true"] .quando-fechado { display: none; }
+.menu-botao[aria-expanded="true"] .quando-aberto { display: inline-flex; }
 .menu .item { display: flex; align-items: center; gap: 10px; padding: 10px 14px; border-radius: 10px; color: var(--texto); text-decoration: none; font-weight: 700; font-size: 14px; }
 .menu .item .ico { color: var(--texto-2); width: 20px; height: 20px; }
 .menu .item:hover { background: var(--creme); }
@@ -160,7 +166,8 @@ body.painel { background: var(--creme); }
 .kpi .det { font-size: 12px; color: var(--verde-escuro); }
 .filtros { display: flex; gap: 16px; align-items: flex-end; flex-wrap: wrap; }
 .filtros .grupo { display: flex; flex-direction: column; gap: 6px; }
-.tabela { background: #fff; border: 1px solid var(--borda); border-radius: 16px; overflow: hidden; }
+.filtros .busca { width: 240px; }
+.tabela { background: #fff; border: 1px solid var(--borda); border-radius: 16px; overflow-x: auto; }
 .tabela table { width: 100%; border-collapse: collapse; }
 .tabela th { background: var(--creme); text-align: left; font-size: 14px; color: var(--texto-2); padding: 10px 16px; border-bottom: 1px solid var(--borda); }
 .tabela td { padding: 12px 16px; border-top: 1px solid var(--borda); font-size: 14px; vertical-align: middle; }
@@ -168,7 +175,9 @@ body.painel { background: var(--creme); }
 .tabela tr[data-href] { cursor: pointer; }
 .tabela tr[data-href]:hover td { background: #FDFBF6; }
 .atrasado { color: var(--critico); font-weight: 700; }
-.duas-col { display: grid; grid-template-columns: minmax(0, 1fr) 400px; gap: 24px; align-items: start; }
+/* A largura da coluna lateral pode ser trocada na tela com style="--lateral: 440px" */
+.duas-col { display: grid; grid-template-columns: minmax(0, 1fr) var(--lateral, 400px); gap: 24px; align-items: start; }
+.duas-col.iguais { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .coluna { display: flex; flex-direction: column; gap: 20px; }
 .cartao h2 .ico, .cartao .cab-cartao .ico { color: var(--verde); }
 .cab-cartao { display: flex; gap: 8px; align-items: center; font-weight: 700; }
@@ -176,6 +185,8 @@ body.painel { background: var(--creme); }
 .dados .r { font-size: 12px; color: var(--texto-2); } .dados .v { font-weight: 700; }
 .barras { display: flex; flex-direction: column; gap: 10px; }
 .barra { display: grid; grid-template-columns: 150px minmax(0, 1fr) 40px; gap: 10px; align-items: center; font-size: 14px; }
+.barra.barra-sit { grid-template-columns: 170px minmax(0, 1fr) 32px; }
+.fotos-local { grid-template-columns: 150px 150px minmax(0, 1fr); }
 .barra .trilho { height: 14px; border-radius: 7px; background: var(--creme); overflow: hidden; }
 .barra .valor { height: 100%; border-radius: 7px; background: var(--verde); }
 .colunas-graf { display: flex; align-items: flex-end; gap: 14px; height: 150px; }
@@ -207,12 +218,58 @@ body.painel { background: var(--creme); }
 .efeito { font-size: 14px; line-height: 20px; padding: 8px 10px; border-radius: 8px; background: var(--verde-claro); color: var(--verde-escuro); }
 .sim { display: flex; flex-direction: column; gap: 6px; padding: 12px 14px; border-radius: 12px; border: 2px dashed var(--borda); }
 .area-card { padding: 20px; }
+/* Painel em tablet e celular: menu vira barra no topo com botão "Menu", colunas empilham */
 @media (max-width: 1100px) {
-  .painel-layout { grid-template-columns: 1fr; }
-  .menu { position: static; height: auto; flex-direction: row; flex-wrap: wrap; }
+  .painel-layout { grid-template-columns: minmax(0, 1fr); }
+  .menu { position: sticky; top: 0; z-index: 1100; height: auto; padding: 10px 16px; gap: 0; border-right: none; border-bottom: 1px solid var(--borda); }
+  .menu-barra { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+  .menu .marca { padding-bottom: 0; }
+  .menu-botao { display: inline-flex; }
+  .menu-itens { display: none; padding: 10px 0 6px; max-height: calc(100vh - 64px); overflow-y: auto; }
+  .menu.aberto .menu-itens { display: flex; }
+  .menu .item { min-height: 48px; font-size: 16px; }
   .menu .rodape { display: none; }
-  .duas-col { grid-template-columns: 1fr; }
+  .duas-col { grid-template-columns: minmax(0, 1fr); }
   .kpis { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .situacao { position: static; max-height: none; overflow: visible; }
+  .mapa-grande { height: 480px; }
+  .tabela td:first-child { white-space: nowrap; }
+}
+@media (max-width: 700px) {
+  body.painel h1 { font-size: 22px; line-height: 28px; }
+  .topo { padding: 8px 16px; min-height: 56px; }
+  .usuario-texto { display: none; }
+  .area { padding: 16px; gap: 16px; }
+  .kpis { gap: 12px; }
+  .kpi { padding: 12px 14px; }
+  .kpi .val { font-size: 22px; line-height: 28px; }
+  .semaforo { grid-template-columns: minmax(0, 1fr); gap: 12px; }
+  .duas-col.iguais { grid-template-columns: minmax(0, 1fr); }
+  .dados { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px 16px; }
+  .barra, .barra.barra-sit { grid-template-columns: minmax(0, 42%) minmax(0, 1fr) 32px; }
+  .fotos-local { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .fotos-local > .cartao { grid-column: 1 / -1; }
+  .filtros { gap: 12px; }
+  .filtros .busca, .filtros > .btn { width: 100%; }
+  .filtros .cresce { display: none; }
+  .mapa-grande { height: 62vh; min-height: 340px; }
+
+  /* Tabelas viram cartões: cada célula mostra o nome da coluna (data-rotulo, preenchido por js/app.js) */
+  .tabela { background: none; border: none; border-radius: 0; overflow: visible; }
+  .tabela thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  .tabela table, .tabela tr { display: block; }
+  .tabela tbody { display: flex; flex-direction: column; gap: 12px; }
+  .tabela tr { background: #fff; border: 1px solid var(--borda); border-radius: 16px; padding: 4px 16px; }
+  .tabela td { display: grid; grid-template-columns: minmax(0, 38%) minmax(0, 1fr); gap: 12px; align-items: center; justify-items: start; padding: 10px 0; }
+  .tabela td::before { content: attr(data-rotulo); font-size: 12px; line-height: 16px; color: var(--texto-2); }
+  .tabela tr td, .tabela tr:first-child td { border-top: none; }
+  .tabela tr td + td, .tabela tr:first-child td + td { border-top: 1px solid #EFE8DB; }
+  .tabela td:first-child, .tabela td:not([data-rotulo]) { grid-template-columns: minmax(0, 1fr); }
+  .tabela td:first-child { font-size: 16px; }
+  .tabela td:has(.chips) { grid-template-columns: minmax(0, 1fr); gap: 8px; }
+  .tabela td:first-child::before, .tabela td:not([data-rotulo])::before { content: none; }
+  .tabela tr[data-href] { box-shadow: 0 3px 0 var(--borda); }
+  .tabela tr[data-href]:hover td { background: none; }
 }
 
 /* Página inicial do protótipo */

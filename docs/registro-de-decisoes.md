@@ -82,6 +82,7 @@ Arquivo no Figma: [Central dos Bichos — Protótipo](https://www.figma.com/desi
 | — | Figma: troca de "denúncia" por "registro" e do campo da P-04 | Não será feita: o Figma está congelado (D-29) |
 | 14/11/2026 | **Protótipo em HTML (`prototipo/`)**: todas as 27 telas (C-01 a C-15, P-01 a P-10, E-01, E-02) e uma página inicial com o índice. Conferido no navegador: página inicial, C-01, C-03 (mapa real), C-04 → C-05 (IA simulada com maus-tratos), P-02, P-03, P-05 (mapa de calor), P-08 e P-10 | Aprovado |
 | 14/11/2026 | P-05 refeito como "Mapa da situação" (semáforo por área, incidentes em três cores, painel "O que está acontecendo" com recomendações) e nova P-11 "Alertas e recomendações" (D-32). Título da tela inicial ajustado (D-31). Conferido no navegador: P-05 com a troca de cores, P-11 e C-01 no celular | Aprovado, com a ressalva da D-33 |
+| 15/11/2026 | Painel (P-01 a P-11) adaptado ao celular e ao tablet: menu recolhido no botão "Menu", colunas empilhadas, tabelas em cartões, mapa com altura proporcional à tela. No computador, as telas continuam iguais. Conferido no navegador em 360, 390, 768 e 1440 px | Pronto |
 
 **Provisórios no protótipo:** o símbolo da marca (pata num círculo amarelo) até chegar o logo vetorial; o escudo no lugar do brasão; o mapa ilustrativo; o formato do protocolo `SMA-2026-000123`; os prazos; os **bairros "A" a "H"**, até chegarem os nomes oficiais; e todos os números do painel, que são simulados.
 
